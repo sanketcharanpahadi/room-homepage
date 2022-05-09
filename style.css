@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-gray: hsl(0, 0%, 63%);
+  --color-primary-black: hsl(0, 0%, 0%);
+  --color-primary-white: hsl(0, 0%, 100%);
+  --color-primary-dark: hsl(0, 0%, 27%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Spartan", sans-serif;
+  background-color: var(--color-primary-white);
+}
+
+header {
+  background-image: url(images/mobile-image-hero-1.jpg);
+  min-height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.logo {
+  position: relative;
+  width: 100%;
+  margin-top: 4.7rem;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-logo {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.links {
+  display: none;
+}
+
+.slider-arrow {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 1.7rem 2rem;
+}
+
+.slider,
+.about-furniture {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-slider {
+  padding: 8.5rem 2.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.furniture-benefit,
+.furniture-benefits {
+  color: var(--color-primary-gray);
+  margin-bottom: 2.8rem;
+  line-height: 1.5;
+}
+
+.shop {
+  display: flex;
+  gap: 3rem;
+}
+
+.cta {
+  text-transform: uppercase;
+  color: var(--color-primary-black);
+  font-weight: 600;
+  letter-spacing: 0.8rem;
+}
+
+/* about furniture section */
+.about {
+  padding: 5rem 2.5rem;
+}
+
+.about-title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.furniture-benefits {
+  font-size: 1.1rem;
+  margin-bottom: 0;
+  line-height: 1.8;
+}
