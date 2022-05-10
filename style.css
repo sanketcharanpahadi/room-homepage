@@ -34,26 +34,27 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar {
   background-image: url(images/mobile-image-hero-1.jpg);
-  min-height: 60vh;
+  min-height: 61vh;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
   position: relative;
+  min-width: 50%;
 }
 
 .logo {
   position: relative;
   width: 100%;
   margin-top: 4.7rem;
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
 }
 
 .img-logo {
@@ -83,23 +84,22 @@ header {
 .about-furniture {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .about-slider {
-  padding: 8.5rem 2.5rem;
+  padding: 8.3rem 2.5rem;
 }
 
 .title {
   font-size: 3rem;
   font-weight: 600;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.1rem;
 }
 
 .furniture-benefit,
 .furniture-benefits {
   color: var(--color-primary-gray);
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.9rem;
   line-height: 1.5;
 }
 
@@ -117,18 +117,105 @@ header {
 
 /* about furniture section */
 .about {
-  padding: 5rem 2.5rem;
+  padding: 5.3rem 2.5rem;
 }
 
 .about-title {
   text-transform: uppercase;
   font-size: 1.2rem;
   letter-spacing: 0.5rem;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
 }
 
 .furniture-benefits {
   font-size: 1.1rem;
   margin-bottom: 0;
-  line-height: 1.8;
+  line-height: 1.7;
+}
+
+.light-img img,
+.slider-img img {
+  width: 100%;
+}
+
+/* desktop design */
+@media (min-width: 900px) {
+  header {
+    flex-direction: row;
+  }
+
+  .navbar {
+    background-image: url(images/desktop-image-hero-1.jpg);
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 5rem;
+    padding: 0 8rem;
+  }
+
+  .logo {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    margin-right: 3rem;
+  }
+
+  .logo {
+    margin-top: 5.5rem;
+  }
+
+  .links {
+    margin-top: 5rem;
+  }
+
+  .about-slider {
+    width: 70%;
+    margin-left: 3rem;
+    padding: 13rem 6.1rem;
+  }
+
+  .slider {
+    flex-direction: row;
+  }
+
+  .slider-img,
+  .about,
+  .light-img {
+    width: 33.333%;
+  }
+
+  .about {
+    width: 45%;
+    padding: 4.2rem;
+    padding-top: 8rem;
+  }
+
+  .slider-arrow {
+    left: 100%;
+    width: 150px;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .title {
+    font-size: 3.8rem;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .img-logo {
+    position: static;
+  }
+
+  .links {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .links li a {
+    color: var(--color-primary-white);
+  }
 }
