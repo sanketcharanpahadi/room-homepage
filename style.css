@@ -75,9 +75,19 @@ header {
   right: 0;
   background-color: black;
   display: flex;
-  justify-content: space-between;
-  gap: 5rem;
-  padding: 1.7rem 2rem;
+}
+
+.left-arrow,
+.right-arrow {
+  width: 6rem;
+  height: 6rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.left-arrow:hover,
+.right-arrow:hover {
+  background-color: var(--color-primary-dark);
 }
 
 .slider,
@@ -193,9 +203,14 @@ header {
 
   .slider-arrow {
     left: 100%;
-    width: 150px;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    width: 16rem;
+  }
+
+  .left-arrow,
+  .right-arrow {
+    width: 8rem;
+    height: 8rem;
+    padding: 3rem;
   }
 
   .title {
