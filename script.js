@@ -28,7 +28,17 @@ const prevBtn = document.querySelector(".left-arrow");
 const furnitureBenefit = document.querySelector(".furniture-benefit");
 const title = document.querySelector(".title");
 const navBar = document.querySelector(".navbar");
+const hamburger = document.querySelector(".hamburger");
+const closeBtn = document.querySelector(".close-btn");
+const popupMenu = document.querySelector(".popup-menu");
+const links = document.querySelector(".links");
 let count = 0;
+
+function active() {
+  closeBtn.classList.toggle("active");
+  popupMenu.classList.toggle("active");
+  links.classList.toggle("active");
+}
 
 nextBtn.addEventListener("click", function () {
   if (count > 1) {
@@ -49,3 +59,6 @@ prevBtn.addEventListener("click", function () {
   title.textContent = obj[count].title;
   navBar.style.backgroundImage = `url(${obj[count].image})`;
 });
+
+hamburger.addEventListener("click", active);
+closeBtn.addEventListener("click", active);

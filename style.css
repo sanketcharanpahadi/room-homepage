@@ -49,6 +49,10 @@ header {
   min-width: 50%;
 }
 
+.hamburger {
+  cursor: pointer;
+}
+
 .logo {
   position: relative;
   width: 100%;
@@ -67,6 +71,66 @@ header {
 
 .links {
   display: none;
+  text-transform: lowercase;
+}
+
+.links li {
+  position: relative;
+}
+
+.links li a::after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  top: 2rem;
+  height: 0.2rem;
+  background-color: var(--color-primary-white);
+}
+
+.links li a:hover::after {
+  display: block;
+}
+
+.popup-menu.active {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 200;
+}
+
+.links.active {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  background-color: white;
+  height: 15vh;
+  align-items: center;
+  padding-left: 8rem;
+}
+
+.close-btn {
+  display: none;
+  cursor: pointer;
+}
+
+.close-btn.active {
+  display: block;
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+  background-color: var(--color-primary-white);
+  border: transparent;
+}
+
+.links li a {
+  color: var(--color-primary-black);
+  font-weight: 900;
 }
 
 .slider-arrow {
@@ -125,6 +189,10 @@ header {
   letter-spacing: 0.8rem;
 }
 
+.cta:hover {
+  color: var(--color-primary-gray);
+}
+
 /* about furniture section */
 .about {
   padding: 5.3rem 2.5rem;
@@ -150,6 +218,21 @@ header {
 
 /* desktop design */
 @media (min-width: 900px) {
+  .close-btn.active {
+    display: none;
+  }
+
+  .popup-menu.active {
+    position: static;
+    background: none;
+  }
+
+  .links.active {
+    background: none;
+    align-items: flex-start;
+    padding-left: 0;
+  }
+
   header {
     flex-direction: row;
   }
@@ -157,7 +240,7 @@ header {
   .navbar {
     background-image: url(images/desktop-image-hero-1.jpg);
     width: 100%;
-    height: auto;
+    height: 82vh;
     display: flex;
     justify-content: flex-start;
     padding-top: 5rem;
@@ -203,14 +286,14 @@ header {
 
   .slider-arrow {
     left: 100%;
-    width: 16rem;
+    width: 17.7rem;
   }
 
   .left-arrow,
   .right-arrow {
-    width: 8rem;
-    height: 8rem;
-    padding: 3rem;
+    width: 9rem;
+    height: 9rem;
+    padding: 3.5rem;
   }
 
   .title {
